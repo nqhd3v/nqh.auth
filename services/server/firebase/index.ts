@@ -33,4 +33,7 @@ const initialFirebase = () => {
   );
 };
 
-export default initialFirebase();
+const firebaseApp = initialFirebase();
+export default firebaseApp;
+export const firestore = (path: string) =>
+  firebaseApp.firestore().collection(path);
